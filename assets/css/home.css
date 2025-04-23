@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -72,12 +78,49 @@ a.contact-btn:hover {
     color: #fff;
 }
 
+.nav-sm-view {
+    display: none;
+}
+
+.slidenav {
+    width: 280px;
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    right: -280px;
+    background: #303030;
+    z-index: 9997;
+    transition: all 0.5s ease;
+    padding: 40px 25px 15px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.slidenav.open {
+    right: 0;
+}
+
+#contbtnSm {
+    display: none;
+}
+
+.hamenu {
+    display: none;
+}
+
+.hamenu>img {
+    max-width: 100%;
+    height: 35px;
+    margin-top: 12px;
+}
+
 /* banner */
 .banner_sec {
     padding: 0 50px;
     height: calc(100vh - 80px);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 50px;
     align-items: center;
 }
 
@@ -146,6 +189,7 @@ a.contact-btn:hover {
 }
 
 .banner_img>img {
+    max-width: 100%;
     width: 500px;
     height: auto;
     border-radius: 50px;
@@ -156,6 +200,7 @@ a.contact-btn:hover {
     padding: 100px 50px;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
     background: #000;
     color: #fff;
 }
@@ -163,6 +208,7 @@ a.contact-btn:hover {
 .about_img {}
 
 .about_img>img {
+    max-width: 100%;
     width: 500px;
     height: auto;
     border-radius: 50px;
@@ -200,7 +246,8 @@ a.contact-btn:hover {
 }
 
 .project_cont {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
 

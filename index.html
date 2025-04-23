@@ -21,7 +21,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="John Doe | Experienced Front-End Developer">
+    <meta name="twitter:title" content="Jithin Francis | Experienced Front-End Developer">
     <meta name="twitter:description"
         content="Experienced Front-End Developer with 3+ years of expertise. Explore my portfolio.">
     <meta name="twitter:image" content="https://">
@@ -34,19 +34,34 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/homebreaks.css">
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
         <h1>Jithin <b>Francis</b></h1>
-        <nav class="nav-links">
-            <a class="active" href="#banner">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="#">Services</a>
-            <a href="#projects">Projects</a>
-        </nav>
-        <a href="#contact" class="contact-btn">Contact Me</a>
+        <div class="nav-lg-view">
+            <nav class="nav-links">
+                <a class="active" href="#banner">Portfolio</a>
+                <a href="#about">About</a>
+                <a href="#">Services</a>
+                <a href="#projects">Projects</a>
+            </nav>
+        </div>
+        <div class="nav-sm-view">
+            <div class="slidenav">
+                <nav class="nav-links">
+                    <a class="active" href="#banner">Portfolio</a>
+                    <a href="#about">About</a>
+                    <a href="#">Services</a>
+                    <a href="#projects">Projects</a>
+                </nav>
+                <a href="#contact" class="contact-btn" id="contbtnSm">Contact Me</a>
+            </div>
+        </div>
+        <a href="#contact" class="contact-btn" id="contbtnLg">Contact Me</a>
+        <a href="#" class="hamenu" id="mobnav"><img src="./assets/images/hamicon.png" alt="menu"></a>
     </header>
     <!-- Header end-->
     <main>
@@ -172,6 +187,18 @@
     <footer>
         <span>All Rights Reserved &#169; 2025 - Website Designed by Jithin Francis</span>
     </footer>
+    <script>
+        let mnav = 0;
+        document.getElementById("mobnav").addEventListener("click", function () {
+            if (mnav === 0) {
+                document.querySelector(".slidenav").classList.add("open");
+                mnav = 1;
+            } else {
+                document.querySelector(".slidenav").classList.remove("open");
+                mnav = 0;
+            }
+        });
+    </script>
 </body>
 
 </html>
